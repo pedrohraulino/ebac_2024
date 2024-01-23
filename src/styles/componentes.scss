@@ -1,0 +1,28 @@
+@mixin texto($fontSize: 16px){
+  font-size: $fontSize;
+  line-height: $fontSize + 10px;
+}
+@mixin titulo($fontSize: 24px){
+  @include texto($fontSize);
+}
+
+.title{
+  @include titulo(40px);
+  &--small{
+    @include titulo(24px);
+  };
+  &--big{
+    @include titulo(48px);
+  }
+}
+
+.text{
+  @include texto(16px);
+  &--small{
+    @include texto(12px);
+  };
+  &--big{
+    @include texto(20px);
+  }
+}
+
