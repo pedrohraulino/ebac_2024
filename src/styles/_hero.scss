@@ -1,7 +1,7 @@
 @use "var";
 
 .hero {
-  min-height: 80vh;
+  min-height: 84vh;
   background-image: url(../../dist/img/backgroundImage.png);
   display: flex;
   align-items: center;
@@ -10,6 +10,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-origin: border-box;
+  background-attachment: fixed;
+  background-position: bottom ;
 
   &__content {
     max-width: 1100px;

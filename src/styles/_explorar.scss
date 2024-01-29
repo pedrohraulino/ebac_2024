@@ -1,0 +1,45 @@
+@use "var";
+
+.explore {
+  max-width: 1100px;
+  display: flex;
+  margin: 0 auto;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    gap: 20px;
+    padding: 60px 30px;
+    flex-grow: 1;
+
+    &__item {
+      width: calc(50% - 20px);
+      background-color: var.$corSecundaria;
+      padding: 35px;
+      border-radius: 8px;
+
+      p {
+          margin: 20px 0;
+      }
+      h2{
+        width: 100%;
+      }
+      button {
+        line-height: 100%;
+        background-color: var.$corPrimaria;
+        border: none;
+        color: var.$corSecundaria;
+        border-radius: 6px;
+        padding: 14px 20px;
+        transition: ease-in-out 400ms;
+        &:hover {
+          background-color: var.$corSecundaria;
+          backdrop-filter: blur(20px);
+          border: 2px solid var.$corPrimaria;
+          color: var.$corPrimaria;
+        }
+      }
+    }
+  }
+}
