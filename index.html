@@ -1,15 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projeto 4</title>
-  <link rel="stylesheet" href="dist/css/main.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto 4</title>
+    <link rel="stylesheet" href="dist/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <section class="hero">
-      <div class="hero__content container">
+      <div class="hero__content">
+        <h2 class="title--big">
+          Bem-vindo ao <strong>Flyox</strong>. Venha voar conosco
+        </h2>
+        <form>
+        <div class="hero__find">
+            <div class="hero__find__content">
+              <div class="hero__find__content--select">
+                <label for="way" class="text--small">Percurso</label>
+                <select id="way" required>
+                  <option class="text" value="" disabled selected hidden>
+                    Selecionar
+                  </option>
+                  <option class="text" value="option1">Somente Ida</option>
+                  <option class="text" value="option2">Somente Volta</option>
+                  <option class="text" value="option3">Ida e Volta</option>
+                </select>
+                <p class="text--small">Passagem</p>
+              </div>
+              <div class="hero__find__content--select">
+                <label for="De" class="text--small">De</label>
+                <select id="De" required>
+                  <option class="text" value="" disabled selected hidden>
+                    Selecionar
+                  </option>
+                  <option class="text" value="option1">Natal</option>
+                  <option class="text" value="option2">João Pessoa</option>
+                  <option class="text" value="option3">Recife</option>
+                </select>
+                <p class="text--small">Origem</p>
+              </div>
+              <div class="hero__find__content--select">
+                <label for="Para" class="text--small">Para</label>
+                <select id="Para" required>
+                  <option class="text" value="" disabled selected hidden>
+                    Selecionar
+                  </option>
+                  <option class="text" value="option1">Natal</option>
+                  <option class="text" value="option2">João Pessoa</option>
+                  <option class="text" value="option3">Recife</option>
+                </select>
+                <p class="text--small">Destino</p>
+              </div>
+              <div class="hero__find__content--select">
+                <label for="Ida" class="text--small">Ida</label>
+                <input type="date" id="Ida" />
+                <p class="text--small">Data ida</p>
+              </div>
+              <div class="hero__find__content--select">
+                <label for="Volta" class="text--small">Volta</label>
+                <input type="date" id="Volta" />
+                <p class="text--small">Data Volta</p>
+              </div>
+              <div class="hero__find__content--select">
+                <label for="Passageiros" class="text--small">Passageiros</label>
+                <select id="Passageiros" required>
+                  <option class="text" value="" disabled selected hidden>
+                    Selecionar
+                  </option>
+                  <option class="text" value="option1">1 passageiros</option>
+                  <option class="text" value="option2">2 passageiros</option>
+                  <option class="text" value="option3">3 passageiros</option>
+                </select>
+                <p class="text--small">Destino</p>
+              </div>
+            </div>
+          </div>
+          <button  class="title--small">Procurar Passagem</button>
+        </form>
       </div>
     </section>
-</body>
+  </body>
 </html>

@@ -1,10 +1,78 @@
-.container { 
-  margin: 0 auto; 
-  max-width: 1200px; 
-  padding: 20px; 
-}
+@use "var";
 
-.hero{
+.hero {
   min-height: 80vh;
   background-image: url(../../dist/img/backgroundImage.png);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:30px;
+
+  &__content {
+    max-width: 1100px;
+    h2 {
+      margin-bottom: 35px;
+      font-weight: 400;
+      text-align: center;
+    }
+  }
+
+  &__find {
+    background-color: var.$corDeFundo;
+    border-radius: 10px;
+    padding: 14px;
+    &__content {
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      display: flex;
+      flex-wrap:wrap;
+      &--select {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex-grow: 1;
+        gap: 15px ;
+        padding: 10px 10px;
+        select, input {
+          height: 38px;
+          border: none;
+          background-color: var.$corSecundaria;
+          padding: 8px;
+          color: var.$corPrimaria;
+          border-radius: 6px;
+        }
+        label,
+        p {
+          padding-left: 8px;
+        }
+      }
+      .border--left {
+        border-right: 3px solid var.$corSecundaria;
+      }
+
+    }
+  }
+  form{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+  }
+  button{
+    line-height: 100%;
+    margin-top: 20px;
+    height: 50px;
+    background-color: var.$corPrimaria;
+    border: none;
+    color: var.$corSecundaria;
+    border-radius: 6px;
+    padding: 14px 20px;
+    transition:  ease-in-out 400ms;
+    &:hover{
+      background-color: var.$corSecundaria;
+      backdrop-filter: blur(20px);
+      border: 2px solid var.$corPrimaria;
+      color: var.$corPrimaria;
+    }
+  }
 }

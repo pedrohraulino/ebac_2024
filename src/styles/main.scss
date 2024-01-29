@@ -1,14 +1,48 @@
-@use 'hero';
-@import 'var.scss';
-@import 'componentes.scss';
+@use "var";
+@use "hero";
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
-  background-color: $corDeFundo;
+body {
+  background-color: var.$corDeFundo;
 }
 
+@mixin texto($fontSize: 16px) {
+  font-size: $fontSize;
+  line-height: $fontSize + 10px;
+  font-family: Inter, sans-serif;
+}
+@mixin titulo($fontSize: 24px) {
+  @include texto($fontSize);
+  font-family: Syne, sans-serif;
+}
+
+.title {
+  @include titulo(40px);
+  &--medium {
+    @include titulo(24px);
+    color: var.$corPrimaria;
+  }
+  &--small {
+    @include titulo(16px);
+    color: var.$corPrimaria;
+  }
+  &--big {
+    @include titulo(48px);
+    color: var.$corPrimaria;
+  }
+}
+
+.text {
+  @include texto(16px);
+  &--small {
+    @include texto(12px);
+  }
+  &--big {
+    @include texto(20px);
+  }
+}
